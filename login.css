@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+font-family: 'Josefin Sans', sans-serif;;
+font-size: 62.5%;
+}
+body{
+    background:rgb(34, 1, 34);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+ 
+.outer-cantainer{
+   display:grid;
+   justify-content:baseline;
+   align-items: center;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   min-width: 30rem;
+   min-height: 37rem;
+   box-shadow: 0px 0px 6px  rgba(82, 4, 82, 0.308);
+   background: rgba(82, 4, 82, 0.308);
+   position: relative;
+   overflow: hidden;
+}
+.biger{
+    border: 3px solid black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#cube-one{
+   width: 6rem;
+   height: 6rem;
+   top: -2rem;
+   left: -3rem;
+   position: absolute;
+   background:rgb(255,255,255,.1);
+   animation: cube2 4s linear infinite; 
+
+}
+
+#cube-two{
+    width: 6rem;
+    height: 6rem;
+    top: 35rem;
+    left: 27rem;
+    position: absolute;
+    background: rgb(255,255,255,.1);
+    animation: cube 4s linear infinite; 
+}
+ 
+ @keyframes cube {
+    0%{
+        transform: translateY(-37rem);
+    }
+ }
+ @keyframes cube2 {
+    0%{
+        transform: translateY(37rem);
+    }
+ }
+
+ .outer-cantainer::before{
+    position: absolute;
+    content: "";
+    width: 140%;
+    height: 140%;
+    top: -20rem;
+    left: -25rem;
+    rotate: -37deg;
+    background: rgb(255,255,255,.2);
+    box-shadow: 0 0 5px  black;
+    border-radius: 30px;
+}
+
+form{
+    padding: .5rem;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    box-sizing: border-box;
+    padding: 2rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);  
+}
+input[type="text"]{
+    margin-top: 1rem;
+    width: 90%;
+    border-top:none ;
+    border-left:none;
+    border-right:none ;
+    border-bottom:3px solid grey ;
+}
+input[type="password"]{
+    margin-top: 1rem;
+    width: 90%;
+    padding-left: 2rem;
+    border-top:none ;
+    border-left:none;
+    border-right:none ;
+    border-bottom:3px solid grey ;   
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.858);
+}
+.login{
+    padding-top: .5rem;
+    min-width: 100%;
+    min-height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    box-shadow: 0 0 5px black;
+    border-radius: 20px;
+    border-bottom:2px solid white;
+   z-index: 2;
+}
+.login i{
+    font-size: 4rem;
+}
